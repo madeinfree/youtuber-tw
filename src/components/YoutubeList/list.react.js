@@ -5,6 +5,11 @@ import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 import { onFetchYoutuber } from '../../pages/App/actions/index';
 
+const APIUrl =
+  process.env.NODE_ENV === 'production'
+    ? `api/youtuber`
+    : 'http://localhost:8080';
+
 const List = ({ title, className, onClick }) => (
   <li onClick={onClick} className={className}>
     {title}
@@ -24,7 +29,7 @@ export default compose(
         headers: {
           'Content-Type': 'application/json'
         },
-        url: `api/youtuber/${_id}`
+        url: `${APIUrl}/${_id}`
       }).then(response => {
         const { items } = R.path(['data', 'payload'], response);
         const { snippet, statistics } = R.path([0], items);

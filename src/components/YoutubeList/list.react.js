@@ -24,7 +24,7 @@ export default compose(
         headers: {
           'Content-Type': 'application/json'
         },
-        url: `http://localhost:8080/api/youtuber/${_id}`
+        url: `api/youtuber/${_id}`
       }).then(response => {
         const { items } = R.path(['data', 'payload'], response);
         const { snippet, statistics } = R.path([0], items);

@@ -1,0 +1,9 @@
+.list {
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.list:hover {
+  background-color: #cfcfcf;
+}

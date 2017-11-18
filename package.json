@@ -1,0 +1,25 @@
+{
+  "name": "youtuber-playground-tw",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bootstrap": "4.0.0-beta.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "ramda": "^0.25.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.17",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "start": "yarn build && node ./server/index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
